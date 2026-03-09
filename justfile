@@ -1,8 +1,8 @@
 node := "bun"
 tstl := "node_modules/typescript-to-lua/dist/tstl.js"
 
-watch:
-    {{node}} "{{tstl}}" --watch
-
 build:
     {{node}} "{{tstl}}"
+
+watch:
+    watchexec just build
